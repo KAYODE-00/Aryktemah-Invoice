@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --primary: #558467;
@@ -9,9 +7,4 @@
 
 body {
   font-family: 'Inter', system_ui, sans-serif;
-}
-
-.invoice-table th, .invoice-table td {
-  padding: 12px 8px;
-  border-bottom: 1px solid #e5e7eb;
 }

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arykyeemah House - Invoice Generator",
-  description: "Private Invoice System",
+  title: "Arykyeemah House - Proposal Builder",
+  description: "Private Team Portal",
 };
 
 export default function RootLayout({
@@ -17,13 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en" className="dark">
-        <body className={inter.className}>
-          {children}
-          <Toaster position="top-center" richColors />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className="dark">
+      <body className={inter.className}>
+        {children}
+        <Toaster position="top-center" richColors />
+      </body>
+    </html>
   );
 }
